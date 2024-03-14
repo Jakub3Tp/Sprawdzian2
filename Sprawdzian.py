@@ -1,54 +1,56 @@
-import string
-
 plik = open("napisy.txt", "r")
 Plik = plik.readline().split
 
 #zad A
 Parzyste = 0
 
+while(Plik > 1000):
 if(Plik % 2):
    Parzyste = Parzyste + 1
-   print("Jest" + Parzyste + "liczb pazystych")
 else:
     print("Liczba nie parzysta")
 
+print(Parzyste)
 #zad B
 Zera = Plik
 Jedynki = Plik
+Tyle_samo = 0
 
+while(Plik > 1000):
 if(len(Zera) == len(Jedynki)):
-
-    print("Jest palindromem")
+    Tyle_samo = Tyle_samo + 1
 else:
-    print("Nie palindromem")
+    print("Liczba nie ma tyle samo jedynek i zer")
+
+print(Tyle_samo)
 
 #zad C
-Zera = 0
-Jedynki = 0
+Napisy_jeden = 0
+Napisy_zero = 0
 
-if Plik.rfind("0"):
-    Zera = Zera + 1
-elif Plik.rfind("1"):
-    Jedynki = Jedynki + 1
+while(Plik > 1000):
+    if(Napisy_zero == 0):
+        Napisy_zero = Napisy_zero + 1
+    elif(Napisy_jeden == 1):
+        Napisy_jeden = Napisy_jeden + 1
 
-print(Zera)
-print(Jedynki)
+print(Napisy_zero)
+print(Napisy_jeden)
 
 #zad D
 
-
 #zad E
 Palindrom = 0
-Palindrom_a = plik.readline()
-Palindrom_b = plik.readline()
+Palindrom_a = Plik
+Palindrom_b = Plik
 
 while(Plik > 1000):
     if(Palindrom_a == Palindrom_b):
         Palindrom = Palindrom + 1
-    print("Jest palindromem")
 else:
     print("Nie palindromem")
 
+print(Palindrom)
 #zad F
 K2 = 0
 K3 = 0
